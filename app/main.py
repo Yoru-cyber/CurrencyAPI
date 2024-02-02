@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 from fastapi import FastAPI
+from fastapi.testclient import TestClient
 
 app = FastAPI()
 
@@ -12,6 +13,10 @@ arr = dolar.split()
 Price = float(arr[2].replace(',','.'))
 currentPrice = float(Price)
 
-@app.get("/")
+@app.get("/v1/dolar", status_code=200)
 async def root():
     return {"Status": 200, "Message": "OK", "Price": currentPrice}
+
+
+if __name__ == "__main__":
+    app.run()
