@@ -1,5 +1,5 @@
 "use server";
-import getPrice from "../services/getPrice";
+import getPrice from "../Services/getPrice";
 export default async function Dollar() {
     const data = await getPrice();
     return (
