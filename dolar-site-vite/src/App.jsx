@@ -1,4 +1,4 @@
-import './App.css'
+import './output.css'
 import Header from './Components/header'
 import Dollar from './Components/dollar'
 
