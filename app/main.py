@@ -2,8 +2,19 @@ import requests
 from bs4 import BeautifulSoup
 from fastapi import FastAPI
 from fastapi.testclient import TestClient
-
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
+origins = [
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 r= requests.get('https://themoneyconverter.com/es/USD/VES')
 soup = BeautifulSoup(r.text, 'html.parser')
