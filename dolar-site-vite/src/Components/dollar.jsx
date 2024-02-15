@@ -11,7 +11,7 @@ export default function Dollar() {
     }
     return (
         
-            <h2 className="text-4xl tracking-widest">
+            <h2 className="text-4xl font-noto-serif">
                 Hoy el precio del dólar es
                 <b style={{ color: "#5EC986" }}>{Price}</b>
             </h2>

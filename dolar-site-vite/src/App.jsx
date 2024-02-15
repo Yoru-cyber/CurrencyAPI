@@ -9,7 +9,7 @@ function App() {
     <Header />
       <div
         className="flex justify-center items-center m-20"
-        style={{ fontFamily: "Space Mono, monospace", height: "50vh" }}
+        style={{height: "50vh" }}
       >
         <Dollar />
         <img src='/capybara.png'></img>
