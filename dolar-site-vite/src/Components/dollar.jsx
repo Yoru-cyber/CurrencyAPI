@@ -7,7 +7,7 @@ export default function Dollar() {
         return <h2 className="text-5xl">Cargando...</h2>
     }
     if(error){
-        return <h2 className="text-5xl">Something went wrong! <br></br> {error}</h2>
+        return <h2 className="text-5xl">Something went wrong! <br></br> {error.message}</h2>
     }
     return (
         
