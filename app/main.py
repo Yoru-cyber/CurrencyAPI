@@ -16,12 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-r= requests.get('https://themoneyconverter.com/es/USD/VES')
+r= requests.get('https://www.bcv.org.ve/', verify=False)
 soup = BeautifulSoup(r.text, 'html.parser')
-dolar=soup.find('span')
+dolar=soup.find(id='dolar').find('strong')
 dolar = dolar.text
-arr = dolar.split()
-Price = float(arr[2].replace(',','.'))
+Price = float(dolar.replace(',', '.'))
 currentPrice = float(Price)
 
 @app.get("/v1/dolar", status_code=200)
