@@ -1,21 +1,20 @@
-import './output.css'
-import Header from './Components/header'
-import Dollar from './Components/dollar'
+import "./output.css";
+import Header from "./Components/header";
+import Dollar from "./Components/dollar";
 
 function App() {
-
   return (
     <>
-    <Header />
+      <Header />
       <div
-        className="flex justify-center items-center m-20"
-        style={{height: "50vh" }}
+        className="flex flex-wrap justify-center items-center m-20"
+        style={{ height: "50vh" }}
       >
         <Dollar />
-        <img src='/capybara.png'></img>
+        <img src="/capybara.png"></img>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

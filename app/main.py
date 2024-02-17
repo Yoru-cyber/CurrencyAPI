@@ -25,7 +25,7 @@ currentPrice = float(Price)
 
 @app.get("/v1/dolar", status_code=200)
 async def root():
-    return {"Status": 200, "Message": "OK", "Price": currentPrice}
+    return {"Status": 200, "Message": "OK", "Price": currentPrice, "Docker": 'True'}
 
 
 if __name__ == "__main__":
