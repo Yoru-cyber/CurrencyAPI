@@ -2,6 +2,7 @@ namespace DolarAPI
 {
     public class CurrencyResponse
 {
-    public float Price { get; set; }
+    public required string Name {get; set;}
+    public required float Price { get; set; }
 };
 }
