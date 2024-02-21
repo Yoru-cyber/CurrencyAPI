@@ -1,8 +1,7 @@
-import getPrice from "../hooks/getPrice";
-import { useEffect, useState } from "react";
+import GetPrice from "../hooks/GetPrice";
 export default function Dollar() {
-  const url = "http://192.168.0.109:5000/v1/dolar";
-  const { Price, loading, error } = getPrice(url);
+  const url = "http://localhost:5135/v2/dolar";
+  const { Price, loading, error } = GetPrice(url);
   if (loading) {
     return <h2 className="text-5xl cd ap">Cargando...</h2>;
   }
