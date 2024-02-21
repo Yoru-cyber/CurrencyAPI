@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DolarAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f790952d9e5610a12a7e7b6283917af48e59e70c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f9ecec96eb8cf6be5344e58fdde903f332cc4b6f")]
 [assembly: System.Reflection.AssemblyProductAttribute("DolarAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DolarAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
