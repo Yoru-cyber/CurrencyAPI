@@ -1,5 +1,6 @@
 using DolarAPI;
 using System;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,8 +27,12 @@ euro_string = euro_string.Replace(',', '.');
 float euro = float.Parse(euro_string);
 app.MapGet("/v2/dolar", async () =>
 {
-
-    return dolar;
+    var data = new CurrencyResponse
+    {
+        Price = dolar
+    };
+    string response = JsonSerializer.Serialize(data);
+    return response;
 });
 app.MapGet("/v2/euro", async () =>
 {

@@ -1,20 +1,28 @@
 node_modules
-# Ignore bin and obj directories
+# Ignore bin and obj folders
 bin/
 obj/
 
 # Ignore user-specific files
 *.user
 
+# Ignore build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
 # Ignore Visual Studio files
 .vs/
+*.suo
+*.user
+*.sln
+*.csproj.user
 
 # Ignore NuGet packages
-*.nuget
+packages/
 
 # Ignore build output
-Debug/
-Release/
+*.dll
+*.exe
 
-# Ignore any temporary files
-Temp/
