@@ -5,7 +5,6 @@ namespace DolarAPI
     public class WebScraper(HttpClient client)
     {
         string response = "";
-        string currency = "";
         public async Task<string> GetCurrency(string url, string currency)
         {
             

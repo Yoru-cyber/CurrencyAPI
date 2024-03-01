@@ -1,11 +1,14 @@
-FROM python:latest
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /App
 
-WORKDIR /code
+#Stage 1
+COPY ./app ./
+RUN dotnet restore
+RUN dotnet publish -c release -o out
 
-COPY ./requirements.txt /code/requirements.txt
-RUN pip install --no-cache-dir --upgrade -r requirements.txt
-RUN pip install fastapi uvicorn httpx
-
-COPY ./app /code/app
-
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+#Stage 2
+FROM mcr.Microsoft.com/dotnet/aspnet:8.0
+WORKDIR /App
+COPY --from=build /App/out .
+EXPOSE 5135
+CMD ["dotnet", "DolarAPI.dll"]
