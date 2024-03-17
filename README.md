@@ -1,3 +1,3 @@
 # Dolar Site
-Este proyecto consiste en una Restful API con el framework **FastAPI** que realiza un web scraping con **Beautiful Soup** para extraer el equivalente de 1 **USD** :us: a **VES** 🇻🇪.
-Esta API es consumida por una página hecha en NextJS.
+This project consists of a Restful API made with **.Net** that performs a web scraping with the native C# module **HttpClient** for several currencies such as: the **euro** 🇪🇺, the **dollar** 🇺🇸 and the **yuan** 🇨🇳 to **VES** 🇻🇪.
+This API is consumed by a page made in NextJS.

@@ -1,0 +1,6 @@
+@DolarAPI_HostAddress = http://localhost:5135
+
+GET {{DolarAPI_HostAddress}}/v2/dolar
+Accept: application/json
+
+###
